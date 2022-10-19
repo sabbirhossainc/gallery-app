@@ -20,7 +20,7 @@ const ImageSearch = ({ searchText }) => {
           />
           <button
             type="submit"
-            className="bg-indigo-500 hover:bg-teal-700 text-white px-3 py-1 ring-2 ring-offset-1 shadow-md rounded-md ring-indigo-500 hover:ring-teal-700 duration-100"
+            className="bg-indigo-500 hover:bg-teal-500 text-slate-50 px-3 py-1 ring-2 ring-offset-1 shadow-md rounded-md ring-indigo-500 hover:ring-teal-500 duration-100"
           >
             Search
           </button>

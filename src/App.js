@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ImageCard from "./components/ImageCard";
 import ImageSearch from "./components/ImageSearch";
@@ -33,12 +34,13 @@ function App() {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="grid grid-rows-12 gap-1 md:grid-cols-3 md:gap-4 place-items-center justify-between items-center">
+        <div className="grid grid-rows-12 md:grid-cols-3 md:gap-x-5 md:max-w-7xl mx-auto justify-center place-items-center items-center">
           {images.map((image) => (
-            <ImageCard key={image.id} image={image} />
+            <ImageCard key={image.id} image={image} searchText={(btnText) => setTerm(btnText)} />
           ))}
         </div>
       )}
+      <Footer/>
     </div>
   );
 }
