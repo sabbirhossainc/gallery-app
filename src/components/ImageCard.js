@@ -1,11 +1,9 @@
-import { React } from "react";
+import React from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const ImageCard = ({ image, searchText }) => {
-  // const [btnText, setBtnText] = useState("");
-
   const getTabData = (e) => {
     const value = e.target.innerText;
     let regEx = /[^a-zA-Z]/g;
@@ -41,11 +39,6 @@ const ImageCard = ({ image, searchText }) => {
       />
       <div className=" px-6 py-4 w-full bg-slate-300">
         <div className="flex pb-4 items-center justify-start">
-          {/* <p className="font-bold text-gray-800 text-xl underline decoration-2 decoration-teal-500 hover:decoration-indigo-500 cursor-pointer">
-            <span className="pr-1">
-              <FontAwesomeIcon className="text-teal-500" icon={faUser} />
-            </span>
-        </p> */}
           <img
             src={image.userImageURL}
             alt=""

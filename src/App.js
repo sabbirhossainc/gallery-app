@@ -19,14 +19,13 @@ function App() {
       .then((data) => {
         setImages(data.hits);
         setIsloading(false);
-        // console.log(data)
       })
       .catch((err) => console.log(err));
   }, [term]);
 
   return (
     <div className="max-w-screen mx-auto bg-stone-100">
-      <Hero/>
+      <Hero />
       <ImageSearch searchText={(text) => setTerm(text)} />
 
       {!isLoading && images.length === 0 && <NotFound />}
@@ -36,11 +35,15 @@ function App() {
       ) : (
         <div className="grid grid-rows-12 md:grid-cols-3 md:gap-x-5 md:max-w-7xl mx-auto justify-center place-items-center items-center">
           {images.map((image) => (
-            <ImageCard key={image.id} image={image} searchText={(btnText) => setTerm(btnText)} />
+            <ImageCard
+              key={image.id}
+              image={image}
+              searchText={(btnText) => setTerm(btnText)}
+            />
           ))}
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
