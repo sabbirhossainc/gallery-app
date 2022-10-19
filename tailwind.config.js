@@ -5,10 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Poppins", "Raleway", "Open Sans", "sans-serif"],
-        serif: ["Marcellus", "serif"],
-      },
+      // fontFamily: {
+      //   sans: ["Poppins", "Raleway", "Open Sans", "sans-serif"],
+      //   serif: ["Marcellus", "serif"],
+      // },
     },
   },
   plugins: [],
