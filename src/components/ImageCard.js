@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const ImageCard = ({ image, searchText }) => {
   const getTabData = (e) => {
@@ -13,6 +13,7 @@ const ImageCard = ({ image, searchText }) => {
   };
 
   const tags = image.tags.split(",");
+  console.log(faDownload.icon.length - 2);
 
   function download() {
     axios({
@@ -37,18 +38,25 @@ const ImageCard = ({ image, searchText }) => {
         alt="Not-found"
         className="object-cover rounded-t-md w-96 h-96 bg-stone-300"
       />
+
       <div className=" px-6 py-4 w-full bg-slate-300">
         <div className="flex pb-4 items-center justify-start">
-          <img
-            src={image.userImageURL}
-            alt=""
-            className="object-cover w-7 h-7 ring-1 ring-slate-500  rounded-full"
-          />
+          {!image.userImageURL ? (
+            <div className="w-7 h-7 ring-2 ring-indigo-500 text-indigo-500 rounded-full bg-inherit flex items-center justify-around">
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+          ) : (
+            <img
+              src={image.userImageURL}
+              alt=""
+              className="object-cover w-7 h-7 ring-1 ring-slate-500 rounded-full"
+            />
+          )}
           &nbsp;
           <a
             href={`https://pixabay.com/users/${image.user}-${image.user_id}/`}
             target="{_blank}"
-            className="pl-1 font-bold text-gray-800 text-base hover:scale-[105%] underline decoration-2 decoration-teal-500 hover:decoration-indigo-500 cursor-pointer duration-200"
+            className="pl-1 font-bold text-gray-800 text-base hover:scale-[105%] underline decoration-2 decoration-indigo-500 hover:decoration-teal-500 cursor-pointer duration-200"
           >
             {image.user}
           </a>
