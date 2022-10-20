@@ -24,16 +24,16 @@ function App() {
   }, [term]);
 
   return (
-    <div className="max-w-screen mx-auto bg-stone-100">
+    <div className="max-w-screen mx-auto">
       <Hero />
+
       <ImageSearch searchText={(text) => setTerm(text)} />
 
       {!isLoading && images.length === 0 && <NotFound />}
-
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="grid grid-rows-12 md:grid-cols-3 md:gap-x-5 md:max-w-7xl mx-auto justify-center place-items-center items-center">
+        <div className="grid grid-rows-12 md:grid-cols-3 md:gap-x-5 md:max-w-7xl pt-3 mx-auto justify-center place-items-center items-center">
           {images.map((image) => (
             <ImageCard
               key={image.id}
@@ -43,6 +43,7 @@ function App() {
           ))}
         </div>
       )}
+
       <Footer />
     </div>
   );

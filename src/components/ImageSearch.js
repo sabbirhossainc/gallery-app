@@ -9,14 +9,14 @@ const ImageSearch = ({ searchText }) => {
   };
 
   return (
-    <div className="col-span-6 max-w-sm md:max-w-full flex items-center justify-around py-5 mx-auto">
-      <form className="w-full max-w-sm md:max-w-6xl" onSubmit={onSubmit}>
-        <div className="flex items-center border-dotted border-b-2 border-indigo-300 py-2 space-x-2 gap-4">
+    <div className="col-span-6 max-w-sm md:max-w-full flex items-center justify-around pt-5 mx-auto">
+      <form className="w-full max-w-sm md:max-w-7xl" onSubmit={onSubmit}>
+        <div className="flex items-center border-dotted border-b-2 border-indigo-300 py-2 space-x-2 gap-2">
           <input
             onChange={(e) => setText(e.target.value)}
             type="text"
             placeholder="Search Image Term..."
-            className="w-full sm:text-sm focus:outline-2 focus:outline-indigo-500 bg-slate-200 p-2 shadow-md rounded-md"
+            className="w-full sm:text-sm focus:outline-2 focus:outline-indigo-500 bg-slate-200 p-2 hover:scale-x-[101%] shadow-md rounded-md duration-100"
           />
           <button
             type="submit"

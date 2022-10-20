@@ -48,14 +48,14 @@ const ImageCard = ({ image, searchText }) => {
           <a
             href={`https://pixabay.com/users/${image.user}-${image.user_id}/`}
             target="{_blank}"
-            className="font-bold text-gray-800 text-xl underline decoration-2 decoration-teal-500 hover:decoration-indigo-500 cursor-pointer"
+            className="pl-1 font-bold text-gray-800 text-base hover:scale-[105%] underline decoration-2 decoration-teal-500 hover:decoration-indigo-500 cursor-pointer duration-200"
           >
             {image.user}
           </a>
           <div className="flex flex-1 justify-end ">
             <button
               onClick={download}
-              className="bg-slate-200 text-indigo-500 hover:text-teal-500 px-3 py-[1%] font-bold shadow-md rounded-full duration-200"
+              className="bg-slate-200 text-indigo-500 hover:text-teal-500 px-3 py-1 font-bold text-xs shadow-md rounded-full duration-200 hover:scale-[105%]"
             >
               Download &nbsp;
               <FontAwesomeIcon icon={faDownload} />
@@ -92,7 +92,7 @@ const ImageCard = ({ image, searchText }) => {
             key={index}
             value=""
             onClick={(e) => getTabData(e)}
-            className="inline-block bg-teal-500 hover:bg-indigo-500 rounded-full shadow-md text-slate-50 mr-2 px-3 py-1 my-1 text-sm font-bold duration-100"
+            className="inline-block bg-teal-500 hover:bg-indigo-500 rounded-full shadow-md text-slate-50 mr-2 px-3 py-1 my-1 text-xs font-semibold hover:scale-[105%] duration-100"
           >
             #{tag}
           </button>

@@ -5,10 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ["Poppins", "Raleway", "Open Sans", "sans-serif"],
-      //   serif: ["Marcellus", "serif"],
-      // },
+      fontFamily: {
+        sans: ["Montserrat","Poppins", "Raleway", "Open Sans", "sans-serif"],
+        serif: ["Marcellus", "serif"],
+      },
+      backgroundImage:(theme) => ({
+        'back_effect' : "url('https://pixabay.com/videos/ink-water-underwater-foam-smoke-67358/')",
+      }),
     },
   },
   plugins: [],
