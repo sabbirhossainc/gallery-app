@@ -13,7 +13,6 @@ const ImageCard = ({ image, searchText }) => {
   };
 
   const tags = image.tags.split(",");
-  console.log(faDownload.icon.length - 2);
 
   function download() {
     axios({
