@@ -9,7 +9,7 @@ const ImageCard = ({ image, searchText }) => {
     let regEx = /[^a-zA-Z]/g;
     const btnData = value.replace(regEx, "");
     searchText(btnData);
-    console.log(btnData);
+    // console.log(btnData);
   };
 
   const tags = image.tags.split(",");
