@@ -1,3 +1,9 @@
+# Preview the site
+
+This site showcase photo gallery from pixabayapi.
+
+## [Gallery app](https://gallerypull.netlify.app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
